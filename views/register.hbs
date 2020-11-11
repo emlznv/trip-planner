@@ -1,0 +1,19 @@
+<div class="register-form">
+    <form action="#/register" method="POST">
+        <h2>Create account</h2>
+        <label>Username:</label>
+        <input type="text" name="username" id="registerUsername" value={{name}}>
+        <label>Password:</label>
+        <input type="password" name="password" id="registerPassword" value={{password}}>
+        <label>Repeat Password:</label>
+        <input type="password" name="repeatPassword" id="registerRepeatPassword" value={{repeatPassword}}>
+        <input type="submit" value="Register">
+        <p class="account-question">Have an account? <a href="/login">Sign in</a></p>
+    </form>
+</div>
+<div class="error-container">
+        <h5 class="error">{{errorMessage}}</h5>
+</div>
+<div class="plane-image-wrapper">
+    <img src="images/plane3.png" class="plane-image">
+</div>

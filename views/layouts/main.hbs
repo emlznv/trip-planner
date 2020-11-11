@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/styles.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="main-ul-and-logo-wrapper">
+                <img src="/images/logo.png" class="logo">
+                <ul class="main-ul">
+                    <li><a href="/">Home</a></li>
+                    {{#if isLogged}}
+                    <li><a href="/trips">Trips</a></li>
+                    <div class="dropdown-container-plan">   
+                        <li class="plan-dropdown-li" class="disabled-link"><a href="#" class="disabled">Plan</a>
+                            <ul class="plan-dropdown-ul">
+                                <li><a href="/create-trip">Plan a Trip</a></li>
+                                <li><a href="/create-experience">Plan an Experience</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <div class="dropdown-container-exp">
+                        <li class="exp-dropdown-li"><a href="#" class="disabled-link">Experiences</a>
+                            <ul class="experiences-dropdown-ul">
+                                <li><a href="/sightseeing">Sightseeing and Museums</a></li>
+                                <li><a href="/cultural">Cultural Events</a></li>
+                                <li><a href="/other">Other</a></li>
+                            </ul>
+                        </li>
+                    </div>
+                    <li><a href="/to-pack">To Pack</a></li>
+                </ul>
+            </div>
+            <li><a href="/logout">Logout</a></li> 
+            {{else}}
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+            {{/if}}
+        </nav>
+    </header>
+    {{{body}}}
+</body>

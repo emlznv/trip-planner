@@ -1,0 +1,47 @@
+<main>
+    <div class="to-pack-wrapper">
+            <form action="/to-pack" method="POST" class="to-pack-form">
+                <div class="to-pack-title">    
+                    <h2>TO PACK</h2>
+                </div>
+                <ul class="to-pack-ul">
+                    {{#each toPackItems}} 
+                    <li class="to-pack-list-items">
+                        <div>
+                            <span class="item">{{name}}</span>
+                        </div>
+                        <div>                        
+                            <input type="submit" value="&#xf0ab" class="fas fa-arrow-circle-down item-move-btn" formaction="/to-pack/move/{{_id}}">
+                        </div>
+                    </li>
+                    {{/each}}
+                    <div class="packed-title">
+                        <h2>PACKED</h2>
+                    </div>
+                    {{#each packedItems}} 
+                     <li class="packed-list-items">
+                        <div>
+                            <span class="packed-icon">&#10004;</span>
+                            <span class="item">{{name}}</span>
+                         </div>
+                        <div>
+                            <input type="submit" value="&#xf2ed" class="far fa-trash-alt item-delete-btn" formaction="/to-pack/delete/{{_id}}">
+                        </div>
+                    </li>
+                    {{/each}}
+                    <li class="to-pack-add-wrapper">
+                        <input type="text" name="name" class="to-pack-add-input" value="{{oldInput.name}}"> 
+                        <input type="submit" value="&#xf055" class="fas fa-plus-circle fa-2x to-pack-add-btn" formaction="/to-pack/add">
+                    </li>  
+                </ul>
+        </form>
+    </div>
+    <div class="error-container">
+        <h5 class="error">{{errorMessage}}</h5>
+    </div>
+</main>
+
+
+
+
+

@@ -1,0 +1,26 @@
+<main>
+    <div class="edit-trip-form">
+        <form action="#/edit-trip/{{_id}}" method="POST">
+          <h2>Plan a trip</h2>
+            <label for="location">Location:</label>
+            <input type="text" name="location" id="location" value="{{oldInput.location}}">
+            <label for="imageURL">Image URL:</label>
+            <input type="text" name="imageURL" id="imageURL" value="{{oldInput.imageURL}}">
+            <label for="start-date">Start date:</label>
+            <input type="date" id="start-date" name="start-date" value="yyyy-mm-dd">
+            <label for="end-date">End date:</label>
+            <input type="date" id="end-date" name="end-date" value="yyyy-mm-dd">
+            <label for="place">Place to stay:</label>
+            <input type="text" name="place" id="place" value="{{oldInput.place}}">
+            <label for="budget">Budget:</label>
+            <input type="text" name="budget" id="budget" value="{{oldInput.budget}}">
+            <input type="submit" value="Confirm">
+        </form>
+    </div>
+    <div class="error-container">
+        <h5 class="error">{{errorMessage}}</h5>
+    </div>
+    <div class="plane-image-wrapper">
+        <img src="/images/plane3.png" class="plane-image">
+    </div>      
+</main>

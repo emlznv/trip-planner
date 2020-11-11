@@ -1,0 +1,29 @@
+<main>
+    <div class="create-experience-form">
+        <form action="#/edit-experience/{{_id}}" method="post">
+            <h2>Plan an experience</h2>
+            <label for="imageURL">Image URL:</label>
+            <input type="text" name="imageURL" id="imageURL" value="{{oldInput.imageURL}}">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" value="{{oldInput.name}}">
+            <label for="address">Address:</label>
+            <input type="text" name="address" id="address" value="{{oldInput.address}}">
+            <label for="price">Entrance price:</label>
+            <input type="number" name="price" id="price" value="{{oldInput.price}}">
+            <label>Experience type:</label>
+            <select class="types" name="type"> 
+                <option value="" disabled selected></option>
+                <option value="sightseeing">Sightseeing and Museums</option>
+                <option value="cultural">Cultural Events</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="submit" value="Confirm">
+        </form>
+    </div>
+    <div class="error-container">
+        <h5 class="error">{{errorMessage}}</h5>
+    </div>
+    <div class="plane-image-wrapper">
+        <img src="/images/plane3.png" class="plane-image">
+    </div>
+</main>

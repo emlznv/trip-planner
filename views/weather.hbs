@@ -1,0 +1,17 @@
+<main>  
+    <form action="#/", method="POST" class="weather-form">
+        <input type="text" name="city" placeholder="Enter a city name">
+        <input type="submit" value="Get weather">
+    </form>
+    <div class="weather-container">
+        <div class="weather-image-wrapper">
+            <img src="/images/{{mainInfo.main}}.png" class="weather-image">
+        </div>
+        <div class="weather-info">
+            <h1>Current weather in {{data.name}}</h1>
+            <h1>{{mainInfo.main}}, {{data.main.temp}}°C</h1>
+            <h3>Feels like: {{data.main.feels_like}}°C</h3>
+            <h3>min: {{data.main.temp_min}}°C - max: {{data.main.temp_max}}°C</h3>
+        </div>
+    </div>
+</main>

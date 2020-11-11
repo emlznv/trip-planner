@@ -1,0 +1,47 @@
+<main>
+    <div class="events-container">
+        {{#each experiences}}
+        <div class="event">
+            <div class="event-content-wrapper">
+                <div class="event-image-wrapper">
+                <img src="{{imageURL}}">
+                </div>
+                <div class="event-info">
+                <div>
+                    <div class="event-info-place-container">
+                        <img src="images/visit-place.png">
+                        <span>{{name}}</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="event-info-address-container">
+                        <img src="images/address.png">
+                        <span>{{address}}</span>
+                    </div>
+                    <div class="event-info-ticket-container">
+                        <img src="images/ticket.png">
+                        <span>{{price}} €</span>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="event-buttons">
+                <button><a href="/edit-experience/{{_id}}">Edit</a></button>
+                <button class="delete"><a href="/delete-experience/{{_id}}">Delete</a></button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</main>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+<main>
+    <div class="events-container">
+        {{#each trips}}
+        <div class="event">
+            <div class="event-content-wrapper">
+                <div class="event-image-wrapper">
+                    <img src="{{imageURL}}">
+                </div>
+                <div class="trip-info">
+                    <div>
+                        <div class="event-info-location-container">
+                            <img src="images/location.png">
+                            <span>{{location}}</span>
+                        </div>
+                        <div class="event-info-date-container">
+                            <img src="images/date.png">
+                            <span>{{startDate}} - {{endDate}}</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="event-info-place-container">
+                            <img src="images/place.png">
+                            <span>{{place}}</span>
+                        </div>
+                        <div class="event-info-budget-container">
+                            <img src="images/budget.png">
+                            <span>{{budget}} €</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="event-buttons">
+                <button><a href="/edit-trip/{{_id}}">Edit</a></button>
+                <button class="delete"><a href="/delete-trip/{{_id}}">Delete</a></button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</main>
+
